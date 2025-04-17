@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(110, 118, 190);
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(29, 26, 95) ;
+    display: flex;
+}
+
+.logo{
+    height: 100%;
+    width: 30%;
+    background-image: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#openSignup, #showLoginFormBtn{
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.signUpFormBody {
+    padding: 20px;
+    background-color: rgb(177, 180, 221);
+    height: 52vh;
+    width: 25vw;
+    text-align: left;
+    border-radius: 15px;
+    color: black;
+    border: 5px solid white;
+}
+
+.loginFormBody{
+    padding: 20px;
+    background-color: rgb(177, 180, 221);
+    height: 30vh;
+    width: 25vw;
+    text-align: left;
+    border-radius: 15px;
+    color: black;
+    border: 5px solid white;
+}
+
+.formHeading {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+}
+
+#signUp, #loginButton {
+    padding: 5px;
+    width: 25%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    display: block;  
+    margin: 20px auto 0; 
+}
+
+#signUp:hover{
+    background-color: rgb(234, 235, 245);
+} 
+
+#loginButton:hover {
+    background-color: rgb(234, 235, 245);
+}
+
+body.blurred .content {
+    filter: blur(5px);
+}
+
+#loginFormContainer { 
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+#loginFormContainer.show-form {
+    display: flex;
+    opacity: 1;
+}
+
+.hero-section{
+    width: 100vw;
+    height: 60vh;
+    background-image: url(image_1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.display{
+    font-size: 60px;
+    margin: 30px;
+    color: white;
+    font-weight: 600;
+    font-family: Dancing Script;
+}
+
+.search-box{
+    height: 25px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+}
+.search-box i{
+    height: 100%;
+    width: 5%;
+    padding: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background-color: rgb(225, 237, 247);
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    height: 100%;
+    width: 95%;
+    padding: 10px;
+    text-align: left;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px;
+    border: none;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    background-color: rgb(225, 237, 247);
+    font-size: 17px;
+}
+.gallery{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.images{
+    gap: 10px;
+    columns: 5 200px;
+}
+.card{
+    margin-bottom: 10px;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.card .details{
+   width: 90%;
+   position: absolute;
+   bottom: -100px;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 15px;
+   background: linear-gradient(to top, rgb(0, 0, 0, 0.8), transparent);
+   font-size: 0.9rem;
+   transition: bottom 0.5s ease;
+}
+
+.card:hover .details{
+    bottom: 0px;
+}
+
+.details button {
+    border: none;
+    background-color: white;
+    padding: 2.5px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+.loader{
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    color : rgb(105, 113, 216);
+    font-size: 17px;
+    border-radius: 8px;
+    margin: 15px;
+    border: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.loader.disabled{
+    opacity : 0.6;
+    pointer-events: none;
+}
+
+.focusBox{
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(0, 0, 0, 0.65);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.focusBox.show{
+    display: block;
+}
+ 
+.focusBox .wrapper{
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 850px;
+    background-color: white;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+.wrapper header .details{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+.details .buttons button{
+    height: 1.6rem;
+    width: 1.6rem;
+    font-size: 0.8rem;
+    color: rgb(8, 17, 130);
+    margin: 0px 3px;
+    background: rgb(105, 113, 216);
+    text-align: center;
+}
+.details .buttons .close{
+    background-color: rgb(90, 86, 86);
+    color: white;
+}
+.preview-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.preview-img img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.preview-img img{
+    max-height: 65vh;
+    max-width: 90vh;
+}
+
+.wrapper .details .image-provider span{
+    font-size: 1rem;
+}
+
+#signUp {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(112, 119, 213);
+    font-weight: bold;
+}
+
+#signUp:hover {
+    background-color: rgb(234, 235, 245);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
